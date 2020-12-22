@@ -106,8 +106,8 @@ namespace ClassWebApi.Controllers
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = new NetworkCredential()
                 {
-                    UserName = "amit.pisces.88@gmail.com",
-                    Password = "Kumar@5678"
+                    UserName = "geetakumari@afsjal.org",
+                    Password = "Scorpion@#$123"
                 };
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtpClient.EnableSsl = true;
