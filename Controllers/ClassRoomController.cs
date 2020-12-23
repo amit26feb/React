@@ -102,7 +102,7 @@ namespace ClassWebApi.Controllers
             mailMessage.To.Add("geetakumari@afsjal.org");
             try
             {
-                SmtpClient smtpClient = new SmtpClient("smtp.mail.yahoo.com", 587);
+                SmtpClient smtpClient = new SmtpClient("smtp.mail.yahoo.com", 465);
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = new NetworkCredential()
                 {
