@@ -115,6 +115,7 @@ namespace ClassWebApi.Controllers
             }
             catch (Exception ex)
             {
+                csvAbsentee = ex.Message;
             }
 
 
