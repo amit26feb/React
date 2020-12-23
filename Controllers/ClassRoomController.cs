@@ -94,7 +94,7 @@ namespace ClassWebApi.Controllers
 
             var mailMessage = new MailMessage
             {
-                From = new MailAddress("geetakumari@afsjal.org"),
+                From = new MailAddress("amit26feb@yahoo.com"),
                 Subject = input.ClassName + " absentee list | "+DateTime.Now.ToString("dd/MM/yyyy"),
                 Body = "<h1>Hello, below rollNo were absent today</h1> <p>"+csvAbsentee+"</p>",
                 IsBodyHtml = true,
@@ -102,11 +102,11 @@ namespace ClassWebApi.Controllers
             mailMessage.To.Add("geetakumari@afsjal.org");
             try
             {
-                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
+                SmtpClient smtpClient = new SmtpClient("smtp.mail.yahoo.com", 587);
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = new NetworkCredential()
                 {
-                    UserName = "amittech56060@gmail.com",
+                    UserName = "amit26feb@yahoo.com",
                     Password = "Scorpion@1234"
                 };
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
