@@ -5,8 +5,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Mail;
 
 namespace ClassWebApi.Controllers
 {
@@ -21,7 +19,8 @@ namespace ClassWebApi.Controllers
 
             List<string> totalStudent = new List<string>();
             List<string> studentsPresent = new List<string>();
-
+            List<string> absentNames = new List<string>();
+            string csvAbsentee = "";
             string[] excelRows = input.AttendenceData.Split('\n', StringSplitOptions.RemoveEmptyEntries);
             foreach (string row in excelRows)
             {
@@ -81,9 +80,18 @@ namespace ClassWebApi.Controllers
                 }
 
 
+
+                List<string> absentee = totalStudent.Except(studentsPresent).ToList();
+
+                foreach (string num in absentee)
+                {
+                    if (int.TryParse(num, out int rollNo))
+                        absentNames.Add(worksheet.Cells[rollNo, 1].Value == null ? "" : worksheet.Cells[rollNo, 1].Value.ToString());
+
+                }
+                csvAbsentee = string.Join(',', absentNames);
             }
-            List<string> absentee = totalStudent.Except(studentsPresent).ToList();
-            string csvAbsentee = string.Join(',', absentee);
+
 
             //var smtpClient1 = new SmtpClient("smtp.gmail.com")
             //{
