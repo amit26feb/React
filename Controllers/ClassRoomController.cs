@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
 
 namespace ClassWebApi.Controllers
 {
@@ -85,38 +84,38 @@ namespace ClassWebApi.Controllers
             List<string> absentee = totalStudent.Except(studentsPresent).ToList();
             string csvAbsentee = string.Join(',', absentee);
 
-            var smtpClient1 = new SmtpClient("smtp.gmail.com")
-            {
-                Port = 587,
-                Credentials = new NetworkCredential("geetakumari@afsjal.org", "Scorpion@#$123"),
-                EnableSsl = true,
-            };
+            //var smtpClient1 = new SmtpClient("smtp.gmail.com")
+            //{
+            //    Port = 587,
+            //    Credentials = new NetworkCredential("geetakumari@afsjal.org", "Scorpion@#$123"),
+            //    EnableSsl = true,
+            //};
 
-            var mailMessage = new MailMessage
-            {
-                From = new MailAddress("amit26feb@yahoo.com"),
-                Subject = input.ClassName + " absentee list | "+DateTime.Now.ToString("dd/MM/yyyy"),
-                Body = "<h1>Hello, below rollNo were absent today</h1> <p>"+csvAbsentee+"</p>",
-                IsBodyHtml = true,
-            };
-            mailMessage.To.Add("geetakumari@afsjal.org");
-            try
-            {
-                SmtpClient smtpClient = new SmtpClient("smtp.mail.yahoo.com", 465);
-                smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential()
-                {
-                    UserName = "amit26feb@yahoo.com",
-                    Password = "Scorpion@1234"
-                };
-                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtpClient.EnableSsl = true;
-                smtpClient.Send("geetakumari@afsjal.org", "geetakumari@afsjal.org", "Account verification", "hhhhhh");
-            }
-            catch (Exception ex)
-            {
-                csvAbsentee = ex.Message;
-            }
+            //var mailMessage = new MailMessage
+            //{
+            //    From = new MailAddress("amit26feb@yahoo.com"),
+            //    Subject = input.ClassName + " absentee list | " + DateTime.Now.ToString("dd/MM/yyyy"),
+            //    Body = "<h1>Hello, below rollNo were absent today</h1> <p>" + csvAbsentee + "</p>",
+            //    IsBodyHtml = true,
+            //};
+            //mailMessage.To.Add("geetakumari@afsjal.org");
+            //try
+            //{
+            //    SmtpClient smtpClient = new SmtpClient("smtp.mail.yahoo.com", 465);
+            //    smtpClient.UseDefaultCredentials = false;
+            //    smtpClient.Credentials = new NetworkCredential()
+            //    {
+            //        UserName = "amit26feb@yahoo.com",
+            //        Password = "Scorpion@1234"
+            //    };
+            //    smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+            //    smtpClient.EnableSsl = true;
+            //    smtpClient.Send("geetakumari@afsjal.org", "geetakumari@afsjal.org", "Account verification", "hhhhhh");
+            //}
+            //catch (Exception ex)
+            //{
+            //    csvAbsentee = ex.Message;
+            //}
 
             csvAbsentee = "1,2,3";
             return Ok(csvAbsentee);
