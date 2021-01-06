@@ -29,7 +29,7 @@ namespace ClassWebApi.Controllers
 
                 if (rowArray.Length >= 2)
                 {
-                    if (DateTime.TryParseExact(rowArray[0], "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime dateTime))
+                    if (DateTime.TryParse(rowArray[0], CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime dateTime))
                     {
                         if (dateTime.Date == DateTime.Now.Date)
                         {
@@ -118,7 +118,8 @@ namespace ClassWebApi.Controllers
             //    csvAbsentee = ex.Message;
             //}
 
-           // csvAbsentee = "1,2,3";
+            if (csvAbsentee.EndsWith(","))
+                csvAbsentee = csvAbsentee.TrimEnd(',');
             return Ok(csvAbsentee);
         }
     }
