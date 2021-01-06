@@ -86,7 +86,7 @@ namespace ClassWebApi.Controllers
                 foreach (string num in absentee)
                 {
                     if (int.TryParse(num, out int rollNo))
-                        absentNames.Add(worksheet.Cells[rollNo, 1].Value == null ? "" : worksheet.Cells[rollNo, 1].Value.ToString());
+                        absentNames.Add(worksheet.Cells[rollNo, 2].Value == null ? "" : worksheet.Cells[rollNo, 2].Value.ToString());
 
                 }
                 csvAbsentee = string.Join(',', absentNames);
