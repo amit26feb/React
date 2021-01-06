@@ -14,6 +14,7 @@ namespace ClassWebApi.Controllers
     {
         [Route("GenerateExcel")]
         [HttpPost]
+        [Produces("application/json")]
         public IActionResult GenerateExcel([FromBody] ClassInput input)
         {
             string path = "";
