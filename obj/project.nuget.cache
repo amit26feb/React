@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nPHDpj0cGgPWxKGea4J5LMSsHbd2GUkTWQpPwWU5L/Su2JNOFvWPJRFGI/lS0Xy1YteD/nZeL+Zv9ME8hUZ2HQ==",
+  "dgSpecHash": "5oLNVFA2R1yuVmqQGqlHrV4aqPLP0ifclqb1tj/lpyxAJeAyznDpnta5PpiAwCJojPRSNC04kjOo1h2Bkn9xWQ==",
   "success": true,
-  "projectFilePath": "D:\\Amit\\Code\\React\\ClassWebApi.csproj",
+  "projectFilePath": "D:\\Amit\\Code\\React.git\\trunk\\ClassWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amit\\.nuget\\packages\\epplus\\5.4.2\\epplus.5.4.2.nupkg.sha512",
     "C:\\Users\\Amit\\.nuget\\packages\\microsoft.aspnetcore.razor.design\\2.1.2\\microsoft.aspnetcore.razor.design.2.1.2.nupkg.sha512",

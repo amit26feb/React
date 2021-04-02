@@ -41,9 +41,9 @@ namespace ClassWebApi.Controllers
 
             switch (input.ClassName)
             {
-                case "6":
-                    path = AppDomain.CurrentDomain.BaseDirectory + "//Excel//VI A.xlsx";
-                    break;
+                //case "6":
+                //  path = AppDomain.CurrentDomain.BaseDirectory + "//Excel//VI A.xlsx";
+                // break;
                 case "7":
                     path = AppDomain.CurrentDomain.BaseDirectory + "//Excel//VII C.xlsx";
                     break;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Amit\\Code\\React\\ClassWebApi.csproj": {}
+    "D:\\Amit\\Code\\React.git\\trunk\\ClassWebApi.csproj": {}
   },
   "projects": {
-    "D:\\Amit\\Code\\React\\ClassWebApi.csproj": {
+    "D:\\Amit\\Code\\React.git\\trunk\\ClassWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Amit\\Code\\React\\ClassWebApi.csproj",
+        "projectUniqueName": "D:\\Amit\\Code\\React.git\\trunk\\ClassWebApi.csproj",
         "projectName": "ClassWebApi",
-        "projectPath": "D:\\Amit\\Code\\React\\ClassWebApi.csproj",
+        "projectPath": "D:\\Amit\\Code\\React.git\\trunk\\ClassWebApi.csproj",
         "packagesPath": "C:\\Users\\Amit\\.nuget\\packages\\",
-        "outputPath": "D:\\Amit\\Code\\React\\obj\\",
+        "outputPath": "D:\\Amit\\Code\\React.git\\trunk\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amit\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "EPPlus": {
               "target": "Package",
@@ -74,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
